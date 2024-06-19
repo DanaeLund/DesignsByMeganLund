@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 :root{
-    --main: #426042;
-    --white: white;
-    --main-transparent: #4260427a;
-    --transparent: #42604200;
-    --main-light: #b6cfb6;
-    --emergency: #FFCC00;
+    --main: #450000;
+    --main-light: #B89685;
+    --white: #F5DFBB;
+    --accent: #4E4E4E;
+    --accent-dark: #313131;
     --text-shadow: 0 0 20px rgba(0, 0, 0, 0.300);
 }
 /* Website Version */
@@ -18,7 +17,7 @@
 }
 
 html {
-    background-color: #426042;
+    background-color: var(--main);
 
 }
 
@@ -36,7 +35,7 @@ section {
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     text-shadow: var(--text-shadow);
 }
@@ -65,14 +64,19 @@ label {
     color: var(--main);
 }
 
+.header-section{
+    background-color: var(--accent-dark);
+}
+
 /* HERO SECTION */
 .hero-section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     min-height: 100vh;
 
-    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.308), var(--main-transparent) , var(--main) 90%), url(./images/julian-hero-bg-img.png);
+    background-image:linear-gradient(to bottom, var(--accent-dark) , var(--main) 90%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -94,12 +98,12 @@ label {
 }
 
 .hero-section .header .logo img{
-    height: 8.5rem;
+    height: 12rem;
     transition: all 0.2s;
 }
 
 .header-section .header-2 img{
-    height: 10rem;
+    height: 14rem;
     padding: 1rem;
     transition: all 0.2s;
 }
@@ -128,7 +132,7 @@ label {
 }
 
 .hero-section .emergency{
-    color: var(--emergency);
+    color: var(--main-light);
     text-decoration: none;
 }
 
@@ -138,8 +142,10 @@ label {
 
 .hero-section .main-text p {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-shadow: var(--text-shadow);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .hero-section .main-text h4 {
@@ -151,7 +157,7 @@ label {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .hero-section .hero-service-buttons .btn {
@@ -170,7 +176,7 @@ label {
 .hero-section .hero-service-buttons .btn a{
     width: 100%;
     height: 100%;
-    padding: 1rem 3rem;
+    padding: 1rem 5rem;
     background-color: var(--white);
     border: 1px solid #fff;
     border-radius: 0.5rem;
@@ -197,9 +203,6 @@ label {
 
 .hero-section .hero-service-buttons-mobile {
     display: none;
-    grid-template-columns: 1fr;
-    row-gap: 2rem;
-    margin-bottom: 2rem;
 }
 
 .hero-section .hero-service-buttons-mobile .btn {
@@ -209,7 +212,7 @@ label {
 }
 
 .hero-section .hero-service-buttons-mobile .btn a{
-    padding: 1rem 3rem;
+    padding: 1rem 9rem;
     background-color: var(--white);
     border: 1px solid #fff;
     border-radius: 0.5rem;
@@ -239,10 +242,10 @@ label {
 
 .about-section .text-section h3 {
     text-align: start;
-    background-color: white;
+    background-color: var(--white);
     padding-left: 4rem;
     padding-block: 1.5rem;
-    color: #426042;
+    color: var(--main);
     
     text-shadow: 0 0 0;
 
@@ -269,7 +272,7 @@ label {
     margin-bottom: 3rem;
     padding: 1rem 2rem;
 
-    border: 1px solid #fff;
+    border: 1px solid var(--white);
     border-radius: 0.5rem;
 
 }
@@ -601,7 +604,7 @@ label {
 .contact-us-section .contact-form-section h4{
     padding-bottom: 1rem;
     text-shadow: none;
-    color: #426042;
+    color: var(--main);
 }
 
 .contact-us-section .contact-form-section h5{
@@ -609,7 +612,7 @@ label {
     font-weight: 500;
     text-align: center;
     text-shadow: none;
-    color: #426042;
+    color: var(--main);
 }
 
 .input-name-container {
@@ -738,7 +741,7 @@ label {
 
 .footer .footer-section-4 a{
     text-decoration: none;
-    color: var(--emergency);
+    color: var(--accent);
 }
 
 /* Total scrollbar width */
@@ -762,7 +765,7 @@ label {
 /* < 600px Version */
 @media (max-width: 600px){
     h2 {
-        font-size: 3rem;
+        font-size: 2rem;
         text-align: center;
         text-shadow: var(--text-shadow);
     }
@@ -787,12 +790,27 @@ label {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        min-height: 100vh;
+
+        min-height: 0;
     
-        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.308), var(--main-transparent) , var(--main) 90%), url(./images/julian-hero-bg-img.png);
+        background-image:linear-gradient(to bottom, var(--accent-dark) , var(--main) 90%);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover; 
+    }
+
+    .hero-section .main-text {
+        padding-bottom: 1.5rem;
+    }
+
+    .hero-section .main-text h2 {
+        padding-top: 1.5rem;
+    }
+    
+    .hero-section .main-text p {
+        text-align: center;
+        font-size: 1.2rem;
+        text-shadow: var(--text-shadow);
     }
 
     .hero-section .header  {
@@ -805,7 +823,7 @@ label {
         justify-content: center;
     
         width: 100%;
-        background-color: var(--main);
+        background-color: var(--accent-dark);
     }
 
     .hero-section .hero-service-buttons {
@@ -814,6 +832,9 @@ label {
 
     .hero-section .hero-service-buttons-mobile {
         display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        margin-bottom: 5rem;
     }
     
     .hero-footer p {
@@ -837,7 +858,7 @@ label {
         text-align: center;
         padding-left: 0;
         padding-block: 1.5rem;
-        color: #426042;
+        color: var(--main);
         
         text-shadow: 0 0 0;
     }
@@ -932,7 +953,7 @@ label {
     }
 
     .contact-form .cta-btn {
-        color: white;
+        color: var(--white);
         font-size: 1.25rem;
     
         background-color: var(--main);
@@ -946,6 +967,50 @@ label {
     }
 }
 
+@media (min-width: 601px) and (max-width:1500px){
+    .hero-section .main-text {
+        padding-bottom: 1rem;
+    }
+
+    .hero-section .main-text h2 {
+        padding-top: 1.25rem;
+    }
+    
+    .hero-section .main-text p {
+        text-align: center;
+        font-size: 1.2rem;
+        text-shadow: var(--text-shadow);
+    }
+
+    .hero-section .hero-service-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 4rem;
+        margin-block: 5rem;
+    }
+
+    .hero-section .hero-service-buttons .btn a{
+        padding: 1rem 6rem;
+        background-color: var(--white);
+        border: 1px solid var(--white);
+        border-radius: 0.5rem;
+        box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.315);
+    
+        color: var(--main);
+        font-size: 1rem;
+        font-weight: bolder;
+    }
+}
+
+
+
+
+
+
+
+
+
 @keyframes color-change {
     0% {
         color: var(--white);
@@ -954,36 +1019,12 @@ label {
     }
     25%, 75% {
         color: var(--main);
-        background-color: var(--emergency);
-        border: 1px solid var(--emergency);
+        background-color: var(--accent);
+        border: 1px solid var(--accent);
     }
     100% {
         color: var(--white);
         background-color: var(--main);
         border: 1px solid #fff;
-    }
-}
-
-@media (min-width: 601px) and (max-width:1500px){
-    .hero-section .hero-service-buttons {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        row-gap: 5rem;
-        margin-bottom: 3rem;
-    }
-
-    .hero-section .hero-service-buttons .btn a{
-        width: 100%;
-        height: 100%;
-        padding: 1rem 3rem;
-        background-color: var(--white);
-        border: 1px solid #fff;
-        border-radius: 0.5rem;
-        box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.315);
-    
-        color: var(--main);
-        font-size: 1rem;
-        font-weight: bolder;
     }
 }
