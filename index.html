@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQ1K4ME8B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-9HQ1K4ME8B');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DesignsByMeganLund</title>
     <link rel="icon" href="./images/logo-2.svg" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
-    <title>Document</title>
 </head>
 
 <body>
@@ -35,7 +44,7 @@
         <div class="hero-service-buttons">
             <div class="btn"><a href="#services-1">Website <br>Design</a></div>
             <div class="btn"><a href="#services-2">Website <br>Development</a></div>
-            <div class="btn"><a href="#services-3">Website <br>Maintaince</a></div>
+            <div class="btn"><a href="#services-3">Website <br>maintenance</a></div>
             <div class="btn"><a href="#services-4">Monthly <br>Reports</a></div>
         </div>
         <div class="hero-service-buttons-mobile">
@@ -244,7 +253,7 @@
 
             <h4 id="tree-removal">Website Design</h4>
             <h4 id="tree-trimming">Website Development</h4>
-            <h4 id="tree-care">Website Maintaince</h4>
+            <h4 id="tree-care">Website maintenance</h4>
             <h4 id="risk-assess">Monthly SEO & Performance Reports</h4>
 
             <p>Safe and efficient tree removal services for trees that are diseased, dead, or pose a risk to your property. <br> <br> We ensure minimal disruption to your landscape.</p>
@@ -301,15 +310,38 @@
             <ul class="grid-list">
                 <li>
                     <h5>Basic Package</h5>
+                    <p class="price">$250 CAD</p>
                     <ul class="package-list">
-                        <li><p class="price">$250 CAD</p></li>
                         <li><p class="sub-service">1 Landing Page Figma Mockup</p></li>
                         <li><p class="sub-service">1 Revision</p></li>
                         <li><p class="sub-service">Simple Design</p></li>
+                        <li><p class="sub-service">Responsive Design Layout</p></li>
+                        <li><p class="sub-service">Placeholder Content</p></li>
+                        <li></li>
+                        <li><p class="sub-service">Additional Revisions + $50 CAD </p></li>
+                        <li><p class="sub-service">Additional Pages + $100 CAD </p></li>
                     </ul>
                 </li>
                 <li>
                     <h5>Standard Package</h5>
+                    <p class="price">$750 CAD</p>
+                    <ul class="package-list">
+                        <li><p class="sub-service">3-5 Page Website Design Figma Mockup</p></li>
+                        <li><p class="sub-service">3 Revisions</p></li>
+                        <li><p class="sub-service">Simple Design</p></li>
+                        <li><p class="sub-service">Responsive Design Layout</p></li>
+                        <li><p class="sub-service">Placeholder Content</p></li>
+                        <li><p class="sub-service">Custom Graphics and Icons</p></li>
+                        <li><p class="sub-service">Basic Style Guide</p></li>
+                        <li><p class="sub-service">Google Maps Integration on Contact Page</p></li>
+                        <li><p class="sub-service">Image Gallery or Portfolio</p></li>
+                        <li><p class="sub-service">Content Management System (CMS) Guidance on Chosen System</p></li>
+                        <li><p class="sub-service"></p></li>
+                        <li><p class="sub-service"></p></li>
+                        <li></li>
+                        <li><p class="sub-service">Additional Revisions + $50 CAD </p></li>
+                        <li><p class="sub-service">Additional Pages + $100 CAD </p></li>
+                    </ul>
                 </li>
                 <li>
                     <h5>Premium Package</h5>
@@ -332,7 +364,7 @@
             <div id="services-3-mobile" class="service-img">
                 <img src="./images/service-img-3.png" alt="">
             </div>
-            <h4>Website Maintaince</h4>
+            <h4>Website maintenance</h4>
             <ul>
                 <li>Tree Health Assessments</li>
                 <li>Pest and Disease Diagnosis</li>
@@ -496,14 +528,39 @@
         </div>
         
         <div class="footer-section-4">
-            <p class="footer-copyright">Copyright © Sunshine Coast Tree Guardians 2024 All Rights Reserved</p>
-            <p class="footer-copyright">Website by <a href="https://www.designsbymeganlund.com">Megan Lund</a></p>
+            <p class="footer-copyright">Copyright © DesignsByMeganLund 2024 All Rights Reserved</p>
+            <!-- <p class="footer-copyright">Website by <a href="https://www.designsbymeganlund.com">Megan Lund</a></p> -->
         </div>
 
     </section>
             
     <!-- Place your scripts here -->
     <script src="/scripts/"></script>
+    <script>
+        document.querySelectorAll('.hero-service-buttons a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();  // Prevent the default anchor click behavior
+        
+                const targetId = this.getAttribute('href').substring(1);  // Get the target section id
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.navigation-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();  // Prevent the default anchor click behavior
+        
+                const targetId = this.getAttribute('href').substring(1);  // Get the target section id
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
     
 </body>
 
