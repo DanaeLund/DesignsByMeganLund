@@ -32,7 +32,7 @@ section {
 
     min-height: 100vh;
 
-    background-image: url("/images/julian-hero-bg-img.png");
+    background-image: url("./images/julian-hero-bg-img.png");
     background-size: cover;
     background-position: center;
     
