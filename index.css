@@ -25,7 +25,6 @@ body {
 
 section {
     padding-inline: 10%;
-    padding-block: 1rem;
 
     font-family: "DM Sans", sans-serif;
     color: var(--white);
@@ -72,6 +71,8 @@ p {
 .under-construction {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    padding: 5rem;
     
     backdrop-filter: blur(10px);
 }
