@@ -2,7 +2,7 @@
 
 :root{
     --main: #450000;
-    --main-light: #B89685;
+    --main-light: #4500004b;
     --white: #fff;
     --accent: #4E4E4E;
     --accent-dark: #313131;
@@ -671,13 +671,14 @@ label {
     margin-top: 1rem;
     padding: 1rem 3rem;
     border-radius: 0.5rem;
+    border: solid 1px var(--main);
     
     animation: color-change 2.5s infinite;
 }
 
 .contact-form .cta-btn:hover {
     animation: none;
-    transform: scale(1);
+    transform: scale(1.05);
     transition: all 0.25s;
 }
 
@@ -1142,7 +1143,7 @@ label {
         margin-top: 1rem;
         padding: 1rem 3rem;
     
-        border: 1px solid var(--main);
+        border: 2px solid var(--main);
         border-radius: 0.5rem;
     }
 }
@@ -1154,17 +1155,17 @@ label {
 @keyframes color-change {
     0% {
         color: var(--white);
-        background-color: var(--accent-dark);
-        border: 1px solid var(--accent-dark);
+        background-color: var(--main);
+        border: 1px solid var(--main);
     }
     25%, 75% {
         color: var(--white);
-        background-color: var(--main-light);
-        border: 1px solid var(--main-light);
+        background-color: var(--accent);
+        border: 1px solid var(--accent);
     }
     100% {
         color: var(--white);
-        background-color: var(--accent-dark);
-        border: 1px solid var(--accent-dark);
+        background-color: var(--main);
+        border: 1px solid var(--main);
     }
 }
