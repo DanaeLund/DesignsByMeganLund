@@ -3,7 +3,7 @@
 :root{
     --main: #450000;
     --main-light: #B89685;
-    --white: #fff2db;
+    --white: #fff;
     --accent: #4E4E4E;
     --accent-dark: #313131;
     --text-shadow: 0 0 20px rgba(0, 0, 0, 0.300);
@@ -69,7 +69,7 @@ label {
 .hero-section {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 
     min-height: 100vh;
 
@@ -148,6 +148,13 @@ label {
 .hero-section .main-text h4 {
     padding-top: 4rem;
     padding-bottom: 3rem;
+}
+
+.hero-section .button-text-section p {
+    text-align: center;
+    font-size: 2rem;
+
+    padding-top: 5rem;
 }
 
 .hero-section .hero-service-buttons {
@@ -831,6 +838,13 @@ label {
         background-color: var(--accent-dark);
     }
 
+    .hero-section .button-text-section p {
+        text-align: center;
+        font-size: 2rem;
+    
+        padding-top: 5rem;
+    }
+
     .hero-section .hero-service-buttons {
         display: none;
     }
@@ -983,6 +997,13 @@ label {
         text-align: center;
         font-size: 1.2rem;
         text-shadow: var(--text-shadow);
+    }
+
+    .hero-section .button-text-section p {
+        text-align: center;
+        font-size: 2rem;
+    
+        padding-top: 5rem;
     }
 
     .hero-section .hero-service-buttons {
