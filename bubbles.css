@@ -9,8 +9,6 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
-    min-height: 100vh;
     background: url(./Well_Background.png) no-repeat;
     background-color: black;
     overflow: hidden;
