@@ -11,7 +11,7 @@ body {
     box-sizing: border-box;
     
     min-height: 100vh;
-    background: url(./Well_Background.png);
+    background: url(./Well_Background.png) no-repeat;
     background-color: black;
     overflow: hidden;
 }
