@@ -1,0 +1,86 @@
+
+:root {
+    --main-color: rgb(0, 0, 0);
+    --alt-color: rgb(0, 0, 0);
+    --alt-2-color: rgb(0, 0, 0);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    min-height: 100vh;
+    background: url(./Well_Background.png);
+    background-color: black;
+    overflow: hidden;
+}
+
+main {
+    position: static;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    margin: 2rem;
+}
+
+.wrapper div{
+    position: absolute;
+    top: calc(100% + 50px);
+
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background:  radial-gradient(rgba(174, 216, 255, 0.068) 0%, rgba(174, 216, 255, 0.199) 80%);
+
+    backdrop-filter: blur(20px);
+    filter: blur(1px);
+    animation: rise 10s infinite linear;
+}
+
+.wrapper div:nth-child(1){
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.wrapper div:nth-child(2){
+    left: 90%;
+    animation-delay: 8s;
+}
+
+.wrapper div:nth-child(3){
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.wrapper div:nth-child(4){
+    left: 30%;
+    animation-delay: 8s;
+}
+
+.wrapper div:nth-child(5){
+    left: 80%;
+    animation-delay: 5s;
+}
+
+.wrapper div:nth-child(6){
+    left: 50%;
+    animation-delay: 9s;
+}
+
+@keyframes rise {
+    0% { top: calc(100% + 50px);
+        opacity: 100%; }
+    50% { transform: scale(2.5); 
+        opacity: 50%; }
+    90% { opacity: 0%; }
+    100% { top: calc(0% - 50px);
+        opacity: 0%; }
+}
